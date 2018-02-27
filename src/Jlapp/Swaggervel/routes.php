@@ -48,9 +48,12 @@ Route::get(Config::get('swaggervel.api-docs-route'), function() {
         Request::setTrustedProxies(array($proxy));
     }
 
-    Blade::setEscapedContentTags('{{{', '}}}');
-    Blade::setContentTags('{{', '}}');
+    $laravel = app();
 
+    if (version_compare($laravel::VERSION, '5.4', '<')) {
+      Blade::setEscapedContentTags('{{{', '}}}');
+      Blade::setContentTags('{{', '}}');
+    }
     //need the / at the end to avoid CORS errors on Homestead systems.
     $response = response()->view('swaggervel::index', array(
         'secure'         => Request::secure(),
