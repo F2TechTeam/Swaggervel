@@ -23,7 +23,7 @@ When you run your app in debug mode, Swaggervel will scan your app folder (or an
 Installation
 ============
 
-- Add `Jlapp\Swaggervel\SwaggervelServiceProvider` to your providers array in `app/config/app.php` above your route provider, to avoid any catch-all routes
+- Add `F2TechTeam\Swaggervel\SwaggervelServiceProvider` to your providers array in `app/config/app.php` above your route provider, to avoid any catch-all routes
 - Run `php artisan vendor:publish` to push swagger-ui to your public folder.
 
 Example
@@ -54,7 +54,7 @@ When you run your app in debug mode, Swaggervel will scan your app folder (or an
 Installation
 ============
 
-- Add `Jlapp\Swaggervel\SwaggervelServiceProvider` to your providers array in `app/config/app.php` above your routes provider (to avoid catch all routes)
+- Add `F2TechTeam\Swaggervel\SwaggervelServiceProvider` to your providers array in `app/config/app.php` above your routes provider (to avoid catch all routes)
 - Run `php artisan vendor:publish` to push config files to your app folder.
 
 Example
